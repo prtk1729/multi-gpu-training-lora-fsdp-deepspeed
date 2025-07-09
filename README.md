@@ -44,20 +44,22 @@ This repository implements and compares various multi-GPU training approaches:
 * **Communication Overhead Analysis**: Discussion and implicit demonstration of the trade-offs in communication between GPUs for each parallelization strategy.
 
 ## Project Structure
+```text
 ├── src/
-│   ├── models/                   # LLM architectures (e.g., TinyLlama, CodeLlama adaptions)
-│   ├── training/                 # Core training loops and utilities
-│   │   ├── model_parallel.py     # Implementation for Naive Model Parallelism
-│   │   ├── ddp_training.py       # Implementation for Distributed Data Parallel
-│   │   ├── fsdp_training.py      # Implementation for Fully Sharded Data Parallel
-│   │   └── optimizers.py         # Custom optimizer configurations and Adam details
-│   ├── utils/                    # Utility functions (VRAM calculation, data loading, etc.)
-│   └── main.py                   # Entry point for running training experiments
-├── configs/                      # Configuration files for different models and training setups
-├── data/                         # Sample datasets for fine-tuning
-├── notebooks/                    # Jupyter notebooks for VRAM analysis and smaller experiments
-├── results/                      # Directory to store training logs and performance metrics
-└── README.md                     # This file
+│   ├── models/              # LLM architectures (e.g., TinyLlama, CodeLlama adaptions)
+│   ├── training/            # Core training loops and utilities
+│   │   ├── model_parallel.py   # Implementation for Naive Model Parallelism
+│   │   ├── ddp_training.py     # Implementation for Distributed Data Parallel
+│   │   ├── fsdp_training.py    # Implementation for Fully Sharded Data Parallel
+│   │   └── optimizers.py       # Custom optimizer configurations and Adam details
+│   ├── utils/               # Utility functions (VRAM calculation, data loading, etc.)
+│   └── main.py              # Entry point for running training experiments
+├── configs/                 # Configuration files for different models and training setups
+├── data/                    # Sample datasets for fine-tuning
+├── notebooks/               # Jupyter notebooks for VRAM analysis and smaller experiments
+├── results/                 # Directory to store training logs and performance metrics
+└── README.md                # This file
+```
 
 ## Getting Started
 
