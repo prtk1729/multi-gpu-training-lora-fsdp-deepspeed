@@ -5,7 +5,7 @@ Fine-tuning large models using Multi-GPU techniques including `DDP, FSDP, Model 
 
 This repository provides a comprehensive exploration and practical implementation of techniques for efficiently fine-tuning Large Language Models (LLMs) on multi-GPU systems. As LLMs grow in size, single-GPU training becomes infeasible or prohibitively slow. This project addresses these challenges by demonstrating various distributed training paradigms and VRAM optimization strategies.
 
-## Table of Contents
+[## Table of Contents
 
 - [Introduction](#introduction)
 - [Key Areas Explored](#key-areas-explored)
@@ -90,6 +90,7 @@ accelerate launch --num_processes=2 src/main.py --config_path configs/tinyllama_
 Example for FSDP training with CodeLlama:
 ```bash
 accelerate launch --num_processes=4 src/main.py --config_path configs/codellama_fsdp.yaml
+```](https://github.com/prtk1729/multi-gpu-training-lora-fsdp-deepspeed/tree/main)
 ```
 
 ## License
